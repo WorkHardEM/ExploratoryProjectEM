@@ -4,41 +4,34 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
 
-public class factoryTestNg {
+public class ParametersFromXmlToSetupTest {
 
     private WebDriver driver;
-    String plan = "";
-    String user = "";
-
-    @DataProvider()
-    private Object[][] plans() {
-        return new Object[][]{
-                new Object[]{"FREE"},
-                new Object[]{"PLUS"},
-                new Object[]{"PREMIUM"}
-        };
-    }
-
+    String plan = null;
+    String user = null;
 
     @BeforeTest()
-    public void setUp() {
+    @Parameters("PLAN")
+    public void setUp(String plan) {
+        this.plan = plan;
         driver = new ChromeDriver();
         switch (plan) {
             case "FREE":
-                System.out.println("Do FREE user");
+                user = "MY_FREE";
                 break;
             case "PLUS":
-                System.out.println("Do PLUS user");
+                user = "MY_PLUS";
                 break;
             case "PREMIUM":
-                System.out.println("Do PREMIUM user");
+                user = "MY_PREMIUM";
                 break;
         }
     }
 
     @Test()
     public void exampleTest() {
-        System.out.println(user + " " + plan);
+        System.out.println(plan);
+        System.out.println(user);
     }
 
     @AfterTest(alwaysRun = true)
