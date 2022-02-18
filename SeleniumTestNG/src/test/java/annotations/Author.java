@@ -5,13 +5,12 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-@Target(ElementType.METHOD)
+@Target({ElementType.METHOD, ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
-public @interface MethodInfo {
+public @interface Author {
 
-    String author() default "Max";
+    String name() default "Max";
 
     int dateOfCreation() default 2022;
 
-    String purpose();
 }
