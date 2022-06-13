@@ -1,4 +1,4 @@
-package builderPattern;
+package builder_pattern;
 
 public class BirthPersons {
 

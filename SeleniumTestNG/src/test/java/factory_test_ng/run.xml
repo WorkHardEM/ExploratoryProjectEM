@@ -4,21 +4,21 @@
     <test name="Test with parameter from xml to setUp">
         <parameter name="PLAN" value="FREE"/>
         <classes>
-            <class name="factoryTestNG.ParametersFromXmlToSetupTest"/>
+            <class name="factory_test_ng.ParametersFromXmlToSetupTest"/>
         </classes>
     </test>
 
     <test name="Test with parameter from xml to setUp2">
         <parameter name="PLAN" value="PLUS"/>
         <classes>
-            <class name="factoryTestNG.ParametersFromXmlToSetupTest"/>
+            <class name="factory_test_ng.ParametersFromXmlToSetupTest"/>
         </classes>
     </test>
 
     <test name="Test with parameter from xml to setUp3">
         <parameter name="PLAN" value="PREMIUM"/>
         <classes>
-            <class name="factoryTestNG.ParametersFromXmlToSetupTest"/>
+            <class name="factory_test_ng.ParametersFromXmlToSetupTest"/>
         </classes>
     </test>
 

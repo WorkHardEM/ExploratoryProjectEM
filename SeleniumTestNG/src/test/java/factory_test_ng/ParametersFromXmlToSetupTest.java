@@ -1,4 +1,4 @@
-package factoryTestNG;
+package factory_test_ng;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;

@@ -1,4 +1,4 @@
-package builderPatternWithLombok;
+package builder_pattern_with_lombok;
 
 import lombok.*;
 import lombok.experimental.Accessors;

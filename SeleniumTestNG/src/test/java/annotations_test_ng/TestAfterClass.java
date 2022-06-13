@@ -1,4 +1,4 @@
-package annotationsTestNG;
+package annotations_test_ng;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
