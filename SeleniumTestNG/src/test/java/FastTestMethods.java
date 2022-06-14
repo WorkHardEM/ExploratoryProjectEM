@@ -1,9 +1,8 @@
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
-import java.sql.SQLOutput;
-
-import static java.lang.Math.*;
+import static java.lang.Math.ceil;
+import static java.lang.Math.random;
 
 public class FastTestMethods {
 
@@ -28,8 +27,8 @@ public class FastTestMethods {
             if (probability != failedNumber) {
                 currentBank = currentBank * percent + currentBank;
             } else {
-                System.out.println("YOU LOST EVERYTHING :(\nBANK: " + ceil(currentBank) +"\nATTEMPTS: " + x);
-                System.out.println("Increase: " + ceil(currentBank/startBank));
+                System.out.println("YOU LOST EVERYTHING :(\nBANK: " + ceil(currentBank) + "\nATTEMPTS: " + x);
+                System.out.println("Increase: " + ceil(currentBank / startBank));
                 break;
             }
             x++;
