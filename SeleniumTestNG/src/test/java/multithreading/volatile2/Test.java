@@ -1,27 +1,30 @@
 package multithreading.volatile2;
 
-import java.util.Scanner;
-
 public class Test {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         MyThread myThread = new MyThread();
         myThread.start();
-
-        Scanner scanner = new Scanner(System.in);
-        scanner.nextLine();
-        myThread.shutdown();
+        Thread.sleep(800);
+        myThread.value = "[THREAD KILLING]";
+        Thread.sleep(900);
+        myThread.value = "[FUCK ... ]";
+        Thread.sleep(900);
+        myThread.value = "[THREAD KILLED] (X_x)";
+        Thread.sleep(900);
+        myThread.running = false;
     }
 }
 
 class MyThread extends Thread {
 
-    private volatile boolean running = true;
+    public volatile boolean running = true;
+    public volatile String value = "[HELLO THREAD] (O_o)";
 
     public void run() {
         while (running) {
-            System.out.println("Hello");
+            System.out.println(value);
             try {
-                Thread.sleep(100);
+                Thread.sleep(900);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
