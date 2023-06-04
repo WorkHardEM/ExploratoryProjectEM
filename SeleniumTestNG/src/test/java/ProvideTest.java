@@ -1,39 +1,37 @@
-import java.util.HashSet;
-import java.util.Set;
-
 public class ProvideTest {
     public static void main(String[] args) {
-        Set<Integer> set1 = new HashSet<>();
+        String str = "28";
+        long l = 0;
+        int i = 0;
+        short s = 0;
+        byte b = 4;
+        double d = 0.1;
+        float f = 0.1f;
+        boolean bool = false;
+        char c = 0;
 
-        set1.add(0);
-        set1.add(1);
-        set1.add(2);
-        set1.add(3);
-        set1.add(4);
-        set1.add(5);
+        b = (byte) s;
+        b = (byte) c;
+        b = (byte) i;
+        b = (byte) l;
+        b = (byte) d;
+        b = (byte) f;
 
-        Set<Integer> set2 = new HashSet<>();
+        s = b;
+        s = (short) i;
+        s = (short) l;
+        s = (short) f;
+        s = (short) d;
+        s = (short) c;
 
-        set2.add(2);
-        set2.add(3);
-        set2.add(4);
-        set2.add(5);
-        set2.add(6);
-        set2.add(7);
+        c = (char) b;
+        c = (char) f;
 
-        // union - объединение множеств
-        Set<Integer> union = new HashSet<>(set1);
-        union.addAll(set2);
-        System.out.println(union);
+        i = (int) l;
 
-        // intersection - пересечение множеств
-        Set<Integer> intersection = new HashSet<>(set1);
-        intersection.retainAll(set2);
-        System.out.println(intersection);
-
-        // разность множест
-        Set<Integer> difference = new HashSet<>(set1);
-        difference.removeAll(set2);
-        System.out.println(difference);
+        l = (long) d;
+        
+        f = b;
+        f = l;
     }
 }

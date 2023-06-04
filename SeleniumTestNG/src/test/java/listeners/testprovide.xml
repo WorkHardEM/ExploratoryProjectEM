@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="My docs Refresh test" parallel="methods" thread-count="10">
+    <listeners>
+        <listener class-name="SeleniumTestNG/src/test/java/listeners/MyListener.java"/>
+    </listeners>
+
+    <test name="My docs refresh tests">
+        <classes>
+            <class name="qa.pdffiller.smoke.mydocs.othertests.MyDocsRefreshFactory"/>
+        </classes>
+    </test>
+</suite>
